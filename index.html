@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SHINNERS EVENT LIMITED</title>
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Boxicons -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+    <!-- Custom Styles -->
+    <style>
+      :root {
+        --red: #b80000;
+        --maroon: #820300;
+        --orange: #ff9800;
+        --blue: #3887be;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        font-family: "Segoe UI", sans-serif;
+      }
+
+      .navbar {
+        background-color: var(--maroon);
+        /* height: 4rem; */
+      }
+
+      .navbar-brand,
+      .nav-link {
+        color: #fff !important;
+      }
+
+      .nav-link:hover {
+        color: var(--orange) !important;
+      }
+
+      .hero-section {
+        background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+          url("assets/event2.jpg") no-repeat center center;
+        background-size: cover;
+        color: white;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+      }
+
+      .hero-section h1 {
+        font-size: 3rem;
+        font-weight: bold;
+        color: var(--orange);
+      }
+
+      .hero-section p {
+        font-size: 1.2rem;
+        max-width: 600px;
+        margin: auto;
+      }
+
+      .hero-btn {
+        margin-top: 20px;
+        background-color: var(--red);
+        color: white;
+        border: none;
+      }
+
+      .hero-btn:hover {
+        background-color: var(--orange);
+      }
+      .social-icons {
+        position: fixed;
+        top: 50%;
+        left: 1.5rem;
+        transform: translateY(-50%);
+        z-index: 1000;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+      }
+
+      .social-icon {
+        display: flex;
+        align-items: center;
+        background-color: #b80000;
+        color: white;
+        padding: 10px;
+        padding-right: 15px;
+        border-radius: 0 25px 25px 0;
+        text-decoration: none;
+        font-size: 20px;
+        transition: all 0.3s ease;
+        transform: translateX(-60%);
+        position: relative;
+        width: 45px;
+        overflow: hidden;
+      }
+
+      .social-icon i {
+        margin-right: 8px;
+      }
+
+      .social-icon span {
+        white-space: nowrap;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+      }
+
+      .social-icon:hover {
+        background-color: #ff9800;
+        transform: translateX(0);
+        width: auto;
+      }
+
+      .social-icon:hover span {
+        opacity: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+      <div class="container">
+        <a class="navbar-brand" href="#"
+          ><i class="bx bxs-party"></i> SHINNERS EVENT</a
+        >
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="collapse navbar-collapse justify-content-end"
+          id="navbarNav"
+        >
+          <ul class="navbar-nav">
+            <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Services</a></li>
+            <li class="nav-item">
+              <a class="nav-link" href="emcee.html">Emcee</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="gallery.html">Gallery</a>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <div class="container">
+        <h1>Bringing Your Vision to Life</h1>
+        <p>
+          Tailor-made events that wow your guests and build lasting memories.
+          Let us transform your ideas into a spectacular reality.
+        </p>
+        <a href="#contact" class="btn btn-lg hero-btn">Plan Your Event</a>
+      </div>
+    </section>
+    <!-- Floating Social Media Icons -->
+    <div class="social-icons">
+      <a href="https://facebook.com" target="_blank" class="social-icon">
+        <i class="bx bxl-facebook"></i>
+        <span>Facebook</span>
+      </a>
+      <a href="https://instagram.com" target="_blank" class="social-icon">
+        <i class="bx bxl-instagram"></i>
+        <span>Instagram</span>
+      </a>
+      <a href="https://wa.me/254700000000" target="_blank" class="social-icon">
+        <i class="bx bxl-whatsapp"></i>
+        <span>WhatsApp</span>
+      </a>
+      <a href="mailto:info@shinners.com" class="social-icon">
+        <i class="bx bx-envelope"></i>
+        <span>Email</span>
+      </a>
+    </div>
+    <!-- ABOUT US -->
+    <section id="About" class="py-5" style="background-color: #fef8f5">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-md-6 mb-4 mb-md-0" data-aos="fade-right">
+            <img
+              src="https://images.unsplash.com/photo-1531058020387-3be344556be6?fit=crop&w=800&q=80"
+              class="img-fluid rounded shadow"
+              alt="Event Planning"
+            />
+          </div>
+          <div class="col-md-6" data-aos="fade-left">
+            <h2 class="mb-3" style="color: #820300">KNOW SHINNERS EVENT LTD</h2>
+            <p>
+              <strong>SHINNERS EVENT LIMITED</strong> is your one-stop
+              specialized events company with a holistic and professional
+              understanding of the events industry. We pride ourselves in
+              capturing our clients’ vision and transforming it into
+              unforgettable experiences.
+            </p>
+            <p>
+              From personalized service to cutting-edge 3D visualization, we
+              ensure every event — big or small — gets our full attention. With
+              obsession to detail and a passion for perfection, we bring
+              imagination to life.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section class="py-5" style="background-color: #ffffff">
+      <div class="container">
+        <div class="text-center mb-5" data-aos="fade-up">
+          <h2 style="color: #8e1e08">Our Services</h2>
+          <p class="text-muted">
+            Tailored solutions to make every moment memorable.
+          </p>
+        </div>
+        <div class="row g-4">
+          <!-- Service Card 1 -->
+          <div class="col-md-4" data-aos="zoom-in">
+            <div class="card h-100 border-0 shadow-sm">
+              <img
+                src="assets/event1.jpg"
+                class="card-img-top"
+                alt="Event Planning"
+              />
+              <div class="card-body text-center">
+                <i
+                  class="bx bxs-calendar-check bx-md"
+                  style="color: #b80000"
+                ></i>
+                <h5 class="card-title mt-3">Event Planning</h5>
+                <p class="card-text">
+                  Complete planning from concept to execution, ensuring flawless
+                  experiences.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Service Card 2 -->
+          <div class="col-md-4" data-aos="zoom-in" data-aos-delay="100">
+            <div class="card h-100 border-0 shadow-sm">
+              <img
+                src="assets/event_setup.webp"
+                class="card-img-top"
+                alt="Venue Setup"
+              />
+              <div class="card-body text-center">
+                <i class="bx bxs-map bx-md" style="color: #ff9800"></i>
+                <h5 class="card-title mt-3">Venue Setup</h5>
+                <p class="card-text">
+                  From layout to lighting, we craft beautiful, functional event
+                  spaces.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Service Card 3 -->
+          <div class="col-md-4" data-aos="zoom-in" data-aos-delay="200">
+            <div class="card h-100 border-0 shadow-sm">
+              <img
+                src="assets/decor2.jpeg"
+                class="card-img-top"
+                alt="Decor and Styling"
+              />
+              <div class="card-body text-center">
+                <i class="bx bxs-paint bx-md" style="color: #820300"></i>
+                <h5 class="card-title mt-3">Decor & Styling</h5>
+                <p class="card-text">
+                  Customized décor that reflects your style and sets the perfect
+                  tone.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Service Card 4 -->
+          <div class="col-md-4" data-aos="zoom-in">
+            <div class="card h-100 border-0 shadow-sm">
+              <img
+                src="assets/corporate2.jpg"
+                class="card-img-top"
+                alt="Corporate Events"
+              />
+              <div class="card-body text-center">
+                <i class="bx bxs-briefcase bx-md" style="color: #3887be"></i>
+                <h5 class="card-title mt-3">Corporate Events</h5>
+                <p class="card-text">
+                  Professional events for branding, launches, conferences and
+                  networking.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Service Card 5 -->
+          <div class="col-md-4" data-aos="zoom-in" data-aos-delay="100">
+            <div class="card h-100 border-0 shadow-sm">
+              <img
+                src="assets/wedding.jpg"
+                class="card-img-top"
+                alt="Wedding Events"
+              />
+              <div class="card-body text-center">
+                <i class="bx bxs-heart bx-md" style="color: #b80000"></i>
+                <h5 class="card-title mt-3">Weddings</h5>
+                <p class="card-text">
+                  Elegant and unforgettable weddings tailored to your love
+                  story.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Service Card 6 -->
+          <div class="col-md-4" data-aos="zoom-in" data-aos-delay="200">
+            <div class="card h-100 border-0 shadow-sm">
+              <img
+                src="assets/videoCam2.jpg"
+                class="card-img-top"
+                alt="3D Visualization"
+              />
+              <div class="card-body text-center">
+                <i class="bx bxs-camera-home bx-md" style="color: #ff9800"></i>
+                <h5 class="card-title mt-3">3D Visualization</h5>
+                <p class="card-text">
+                  Preview your event layout digitally to optimize design and
+                  flow.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Contact Section -->
+    <section
+      id="contact"
+      class="contact-section text-white py-5"
+      style="
+        background: url('assets/mcAction.jpg') center/cover fixed no-repeat;
+        position: relative;
+      "
+    >
+      <div
+        style="
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background-color: rgba(0, 0, 0, 0.7);
+          z-index: 1;
+        "
+      ></div>
+
+      <div class="container position-relative" style="z-index: 2">
+        <div class="text-center mb-5" data-aos="fade-down">
+          <h2 class="display-5" style="color: #ff9800">Get in Touch</h2>
+          <p class="lead">
+            Have a question or want to book us for your next big event? Drop us
+            a message!
+          </p>
+        </div>
+
+        <form class="row g-4" data-aos="fade-up">
+          <div class="col-md-6">
+            <label for="name" class="form-label">Name</label>
+            <input
+              type="text"
+              id="name"
+              class="form-control"
+              placeholder="Your Full Name"
+              required
+            />
+          </div>
+
+          <div class="col-md-6">
+            <label for="email" class="form-label">Email</label>
+            <input
+              type="email"
+              id="email"
+              class="form-control"
+              placeholder="Your Email Address"
+              required
+            />
+          </div>
+
+          <div class="col-12">
+            <label for="message" class="form-label">Comment / Question</label>
+            <textarea
+              id="message"
+              rows="5"
+              class="form-control"
+              placeholder="Write your message here..."
+              required
+            ></textarea>
+          </div>
+
+          <div class="col-12 text-center">
+            <button type="submit" class="btn btn-warning px-5 py-2">
+              <i class="bx bx-send"></i> Send Message
+            </button>
+          </div>
+        </form>
+      </div>
+    </section>
+    <!-- Testimonials Slider Section -->
+    <section class="py-5 bg-light" id="testimonials">
+      <div class="container">
+        <div class="text-center mb-4" data-aos="fade-down">
+          <h2 class="display-5" style="color: #b80000">What Our Clients Say</h2>
+          <p class="lead">Real stories. Real events. Real satisfaction.</p>
+        </div>
+
+        <div
+          id="testimonialCarousel"
+          class="carousel slide"
+          data-bs-ride="carousel"
+        >
+          <div class="carousel-inner">
+            <!-- Slide 1 -->
+            <div class="carousel-item active">
+              <div class="card border-0 shadow-sm p-4 text-center">
+                <i class="bx bxs-quote-alt-left bx-lg text-warning mb-3"></i>
+                <p class="fst-italic">
+                  “SSHINNERS made our wedding absolutely magical. From planning
+                  to execution, everything was flawless.”
+                </p>
+                <h5 style="color: #3887be">Sarah & Kevin</h5>
+                <small class="text-muted">Wedding Clients</small>
+              </div>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="carousel-item">
+              <div class="card border-0 shadow-sm p-4 text-center">
+                <i class="bx bxs-quote-alt-left bx-lg text-warning mb-3"></i>
+                <p class="fst-italic">
+                  “Professional, detail-oriented, and creative — our corporate
+                  gala couldn’t have been in better hands.”
+                </p>
+                <h5 style="color: #3887be">Julius M.</h5>
+                <small class="text-muted">Corporate Client</small>
+              </div>
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="carousel-item">
+              <div class="card border-0 shadow-sm p-4 text-center">
+                <i class="bx bxs-quote-alt-left bx-lg text-warning mb-3"></i>
+                <p class="fst-italic">
+                  “From lighting to layout, they brought our fashion show vision
+                  to life better than we imagined.”
+                </p>
+                <h5 style="color: #3887be">Tasha K.</h5>
+                <small class="text-muted">Fashion Show Organizer</small>
+              </div>
+            </div>
+          </div>
+
+          <!-- Controls -->
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#testimonialCarousel"
+            data-bs-slide="prev"
+          >
+            <span
+              class="carousel-control-prev-icon bg-dark rounded-circle p-2"
+              aria-hidden="true"
+            ></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#testimonialCarousel"
+            data-bs-slide="next"
+          >
+            <span
+              class="carousel-control-next-icon bg-dark rounded-circle p-2"
+              aria-hidden="true"
+            ></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+    </section>
+    <!-- Footer Section -->
+    <footer class="text-white pt-5 pb-4" style="background-color: #820300">
+      <div class="container text-md-left">
+        <div class="row">
+          <!-- Company Info -->
+          <div class="col-md-4 mb-4" data-aos="fade-up">
+            <h5 class="fw-bold text-uppercase" style="color: #ff9800">
+              SSHINNERS EVENTS
+            </h5>
+            <p class="small">
+              Your 1-stop specialized events company with a professional
+              understanding of today’s dynamic events industry. We turn visions
+              into unforgettable experiences.
+            </p>
+          </div>
+
+          <!-- Quick Links -->
+          <div class="col-md-2 mb-4" data-aos="fade-up" data-aos-delay="100">
+            <h6 class="text-uppercase fw-bold mb-3" style="color: #ff9800">
+              Quick Links
+            </h6>
+            <ul class="list-unstyled">
+              <li>
+                <a href="#about" class="text-white text-decoration-none small"
+                  >About Us</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#services"
+                  class="text-white text-decoration-none small"
+                  >Services</a
+                >
+              </li>
+              <li>
+                <a
+                  href="emcee.html"
+                  class="text-white text-decoration-none small"
+                  >Emcee</a
+                >
+              </li>
+              <li>
+                <a href="#contact" class="text-white text-decoration-none small"
+                  >Contact</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Contact Info -->
+          <div class="col-md-3 mb-4" data-aos="fade-up" data-aos-delay="200">
+            <h6 class="text-uppercase fw-bold mb-3" style="color: #ff9800">
+              Contact
+            </h6>
+            <p class="small mb-1"><i class="bx bx-map"></i> Nairobi, Kenya</p>
+            <p class="small mb-1">
+              <i class="bx bx-envelope"></i> info@sshinners.co.ke
+            </p>
+            <p class="small"><i class="bx bx-phone"></i> +254 700 123 456</p>
+          </div>
+
+          <!-- Social Icons -->
+          <div class="col-md-3 mb-4" data-aos="fade-up" data-aos-delay="300">
+            <h6 class="text-uppercase fw-bold mb-3" style="color: #ff9800">
+              Follow Us
+            </h6>
+            <div class="d-flex gap-3">
+              <a href="#" class="text-white fs-4"
+                ><i class="bx bxl-facebook-circle"></i
+              ></a>
+              <a href="#" class="text-white fs-4"
+                ><i class="bx bxl-instagram-alt"></i
+              ></a>
+              <a href="#" class="text-white fs-4"
+                ><i class="bx bxl-twitter"></i
+              ></a>
+              <a href="#" class="text-white fs-4"
+                ><i class="bx bxl-linkedin-square"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bottom Bar -->
+        <hr class="border-top border-light mt-4" />
+        <div class="text-center small">
+          &copy; 2025
+          <span style="color: #ff9800">SSHINNERS EVENT LIMITED</span>. All
+          rights reserved.
+        </div>
+      </div>
+    </footer>
+    <!-- Back to Top Button -->
+    <button
+      id="backToTopBtn"
+      class="btn btn-warning rounded-circle shadow"
+      style="
+        position: fixed;
+        bottom: 30px;
+        right: 20px;
+        display: none;
+        z-index: 999;
+      "
+    >
+      <i class="bx bx-chevron-up bx-sm"></i>
+    </button>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- AOS Script -->
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 1000,
+        once: true,
+      });
+    </script>
+    <script>
+      const backToTopBtn = document.getElementById("backToTopBtn");
+
+      // Show button when scrolled down
+      window.onscroll = () => {
+        if (
+          document.body.scrollTop > 200 ||
+          document.documentElement.scrollTop > 200
+        ) {
+          backToTopBtn.style.display = "block";
+        } else {
+          backToTopBtn.style.display = "none";
+        }
+      };
+
+      // Scroll to top when clicked
+      backToTopBtn.addEventListener("click", () => {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      });
+    </script>
+  </body>
+</html>
