@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Donate | Shinners Event</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --orange: #ffa725;
+        --black: #0a0a0a;
+        --blue: #060a7a;
+        --red: #820300;
+        --light-bg: #fef8f5;
+      }
+
+      .hero-donate {
+        background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+          url("assets/event_setup.webp") center/cover no-repeat;
+        color: rgb(194, 3, 3);
+        padding: 6rem 2rem;
+        text-align: center;
+      }
+
+      .donate-btn {
+        background-color: var(--black);
+        color: white;
+        padding: 10px 24px;
+        border: none;
+        border-radius: 50px;
+        text-transform: uppercase;
+        font-weight: bold;
+      }
+
+      .donate-btn:hover {
+        background-color: #050505;
+      }
+
+      .csr-highlight {
+        background-color: var(--light-bg);
+        border-left: 6px solid var(--orange);
+        padding: 1rem 1.5rem;
+        margin-bottom: 2rem;
+        border-radius: 10px;
+      }
+
+      .past-events img {
+        height: 200px;
+        object-fit: cover;
+        border-radius: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Hero Section -->
+    <section class="hero-donate">
+      <h1 class="display-5 fw-bold">Support Our Mission</h1>
+      <p class="lead" style="color: var(--light-bg)">
+        Join SHINNERS Event in making a lasting impact through our CSR programs.
+      </p>
+      <a href="#donate-form" class="donate-btn mt-3">Donate Now</a>
+    </section>
+
+    <!-- CSR Content -->
+    <section class="container py-5">
+      <h2
+        class="mb-4 text-center text-uppercase fw-bold"
+        style="color: var(--blue)"
+      >
+        Our Commitment to Society
+      </h2>
+
+      <div class="csr-highlight">
+        <h5>🎓 Educating Less Fortunate</h5>
+        <p>
+          Through our Foundation, we sponsor 90 vulnerable students in high
+          school education.
+        </p>
+      </div>
+
+      <div class="csr-highlight">
+        <h5>🏠 Children's Homes Support</h5>
+        <p>
+          We provide material donations to children's homes and special schools
+          across Kenya.
+        </p>
+      </div>
+
+      <div class="csr-highlight">
+        <h5>🎭 Talent Development</h5>
+        <p>
+          Empowering youth by identifying and supporting their talents through
+          mentorship and events.
+        </p>
+      </div>
+
+      <div class="csr-highlight">
+        <h5>🎗 Sponsorship of Charity Events</h5>
+        <p>
+          We proudly sponsor events like the Boot Cancer Challenge, KU Golf
+          Tournament, and Eardrop Kenya to raise funds for orphans and children
+          with hearing disabilities.
+        </p>
+      </div>
+    </section>
+
+    <!-- Donation Options -->
+    <section id="donate-form" class="container py-5 text-center">
+      <h3 class="mb-4 fw-bold" style="color: var(--blue)">
+        Choose a Donation Method
+      </h3>
+
+      <!-- PayPal -->
+      <div class="mb-4">
+        <form
+          action="https://www.paypal.com/donate"
+          method="post"
+          target="_blank"
+        >
+          <input
+            type="hidden"
+            name="hosted_button_id"
+            value="YOUR_PAYPAL_BUTTON_ID"
+          />
+          <button class="donate-btn">
+            <i class="bx bxl-paypal me-2"></i>Donate via PayPal
+          </button>
+        </form>
+      </div>
+
+      <!-- M-Pesa Instructions -->
+      <div class="bg-light p-4 rounded">
+        <h5 class="mb-2">Donate via M-Pesa</h5>
+        <p>Go to M-Pesa → Lipa na M-Pesa → Paybill</p>
+        <p><strong>Paybill:</strong> 123456</p>
+        <p><strong>Account:</strong> SHINNERSCSR</p>
+      </div>
+    </section>
+
+    <!-- Past Events -->
+    <section class="container py-5">
+      <h3 class="text-center fw-bold mb-4" style="color: var(--blue)">
+        Snapshots from Past Charity Events
+      </h3>
+      <div class="row g-4 past-events">
+        <div class="col-md-4">
+          <img
+            src="https://images.unsplash.com/photo-1584467735871-4482a1a14f1b"
+            alt="Boot Cancer Challenge"
+            class="img-fluid w-100"
+          />
+          <h6 class="mt-2">Boot Cancer Challenge</h6>
+        </div>
+        <div class="col-md-4">
+          <img
+            src="https://images.unsplash.com/photo-1562564055-71e051d33c19"
+            alt="Golf Tournament"
+            class="img-fluid w-100"
+          />
+          <h6 class="mt-2">KU Golf for Orphaned Students</h6>
+        </div>
+        <div class="col-md-4">
+          <img
+            src="https://images.unsplash.com/photo-1607746882042-944635dfe10e"
+            alt="Eardrop Kenya"
+            class="img-fluid w-100"
+          />
+          <h6 class="mt-2">Eardrop Kenya - Hearing Aid Campaign</h6>
+        </div>
+      </div>
+    </section>
+
+    <footer class="text-center py-4 bg-dark text-white">
+      &copy; 2025 SHINNERS Event Ltd. All rights reserved.
+    </footer>
+  </body>
+</html>

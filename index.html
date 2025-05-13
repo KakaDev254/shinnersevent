@@ -19,10 +19,10 @@
     <!-- Custom Styles -->
     <style>
       :root {
-        --red: #b80000;
-        --maroon: #820300;
-        --orange: #ff9800;
-        --blue: #3887be;
+        --red: #001a6e;
+        --maroon: #410445;
+        --orange: #e52020;
+        --blue: #ff2df1;
       }
       html {
         scroll-behavior: smooth;
@@ -45,13 +45,27 @@
       .nav-link:hover {
         color: var(--orange) !important;
       }
+      .donate-btn {
+        background-color: var(--orange); /* or use a hex code like #FFA725 */
+        color: white;
+        padding: 8px 20px;
+        border-radius: 30px;
+        font-weight: 600;
+        text-transform: uppercase;
+        transition: all 0.3s ease;
+      }
+
+      .donate-btn:hover {
+        background-color: #050505; /* slightly darker for hover effect */
+        color: white;
+      }
 
       .hero-section {
         background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
           url("assets/event2.jpg") no-repeat center center;
         background-size: cover;
         color: white;
-        height: 100vh;
+        height: 80vh;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -78,7 +92,7 @@
       }
 
       .hero-btn:hover {
-        background-color: var(--orange);
+        background-color: black;
       }
       .social-icons {
         position: fixed;
@@ -94,7 +108,7 @@
       .social-icon {
         display: flex;
         align-items: center;
-        background-color: #b80000;
+        background-color: #001a6e;
         color: white;
         padding: 10px;
         padding-right: 15px;
@@ -119,7 +133,7 @@
       }
 
       .social-icon:hover {
-        background-color: #ff9800;
+        background-color: #0a0a0a;
         transform: translateX(0);
         width: auto;
       }
@@ -127,15 +141,60 @@
       .social-icon:hover span {
         opacity: 1;
       }
+      @media (max-width: 991.98px) {
+        .social-icons {
+          display: none;
+        }
+      }
+      .mc-btn {
+        color: #a41106;
+        border: 2px solid #070660;
+        background-color: transparent;
+        transition: all 0.3s ease;
+      }
+
+      .mc-btn:hover {
+        background-color: #080808;
+        color: #fff;
+      }
+      .about-img {
+        border-radius: 0 50% 50% 0; /* Creates a creative diagonal arc */
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        transition: transform 0.5s ease, clip-path 0.5s ease;
+        clip-path: ellipse(80% 100% at 20% 50%);
+        object-fit: cover;
+      }
+
+      .about-img:hover {
+        transform: scale(1.03);
+        clip-path: ellipse(90% 100% at 10% 50%);
+      }
+      .about-img::after {
+        content: "";
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        width: 100%;
+        height: 100%;
+        border: 2px solid var(--orange);
+        z-index: -1;
+        border-radius: 0 50% 50% 0;
+      }
     </style>
   </head>
   <body>
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+    <nav
+      class="navbar navbar-expand-lg navbar-dark sticky-top"
+      style="background-color: #0e0d0d"
+    >
       <div class="container">
-        <a class="navbar-brand" href="#"
-          ><i class="bx bxs-party"></i> SHINNERS EVENT</a
-        >
+        <!-- Logo + Brand -->
+        <a class="navbar-brand d-flex align-items-center gap-2" href="#">
+          <img src="assets/logo.jpg" alt="Shinners Event Logo" height="40" />
+        </a>
+
+        <!-- Toggler for mobile -->
         <button
           class="navbar-toggler"
           type="button"
@@ -144,21 +203,32 @@
         >
           <span class="navbar-toggler-icon"></span>
         </button>
+
+        <!-- Navbar Links -->
         <div
           class="collapse navbar-collapse justify-content-end"
           id="navbarNav"
         >
           <ul class="navbar-nav">
             <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">About</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Services</a></li>
+            <li class="nav-item">
+              <a class="nav-link" href="#About">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#services">Services</a>
+            </li>
             <li class="nav-item">
               <a class="nav-link" href="emcee.html">Emcee</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="gallery.html">Gallery</a>
             </li>
-            <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Contact</a>
+            </li>
+            <li class="nav-item">
+              <a href="donate.html" class="btn donate-btn ms-3"> Donate </a>
+            </li>
           </ul>
         </div>
       </div>
@@ -176,7 +246,7 @@
       </div>
     </section>
     <!-- Floating Social Media Icons -->
-    <div class="social-icons">
+    <div class="social-icons d-none d-lg-flex">
       <a href="https://facebook.com" target="_blank" class="social-icon">
         <i class="bx bxl-facebook"></i>
         <span>Facebook</span>
@@ -194,19 +264,25 @@
         <span>Email</span>
       </a>
     </div>
+
     <!-- ABOUT US -->
     <section id="About" class="py-5" style="background-color: #fef8f5">
       <div class="container">
         <div class="row align-items-center">
+          <!-- Image -->
           <div class="col-md-6 mb-4 mb-md-0" data-aos="fade-right">
             <img
               src="https://images.unsplash.com/photo-1531058020387-3be344556be6?fit=crop&w=800&q=80"
-              class="img-fluid rounded shadow"
+              class="img-fluid rounded shadow about-img"
               alt="Event Planning"
             />
           </div>
+
+          <!-- Text Content -->
           <div class="col-md-6" data-aos="fade-left">
-            <h2 class="mb-3" style="color: #820300">KNOW SHINNERS EVENT LTD</h2>
+            <h2 class="mb-3" style="color: var(--red)">
+              KNOW SHINNERS EVENT LTD
+            </h2>
             <p>
               <strong>SHINNERS EVENT LIMITED</strong> is your one-stop
               specialized events company with a holistic and professional
@@ -220,6 +296,17 @@
               obsession to detail and a passion for perfection, we bring
               imagination to life.
             </p>
+
+            <!-- Meet Our MC Button -->
+            <a
+              href="emcee.html"
+              class="btn mc-btn mt-3 px-4 py-2 d-inline-flex align-items-center gap-2"
+              data-aos="fade-up"
+              data-aos-delay="300"
+            >
+              <i class="bx bx-microphone-alt"></i>
+              Meet Our MC
+            </a>
           </div>
         </div>
       </div>
@@ -229,7 +316,7 @@
     <section class="py-5" style="background-color: #ffffff">
       <div class="container">
         <div class="text-center mb-5" data-aos="fade-up">
-          <h2 style="color: #8e1e08">Our Services</h2>
+          <h2 style="color: var(--red)">Our Services</h2>
           <p class="text-muted">
             Tailored solutions to make every moment memorable.
           </p>
@@ -377,7 +464,7 @@
 
       <div class="container position-relative" style="z-index: 2">
         <div class="text-center mb-5" data-aos="fade-down">
-          <h2 class="display-5" style="color: #ff9800">Get in Touch</h2>
+          <h2 class="display-5" style="color: #f53106">Get in Touch</h2>
           <p class="lead">
             Have a question or want to book us for your next big event? Drop us
             a message!
@@ -448,7 +535,7 @@
                   “SSHINNERS made our wedding absolutely magical. From planning
                   to execution, everything was flawless.”
                 </p>
-                <h5 style="color: #3887be">Sarah & Kevin</h5>
+                <h5 style="color: #080569">Sarah & Kevin</h5>
                 <small class="text-muted">Wedding Clients</small>
               </div>
             </div>
@@ -461,7 +548,7 @@
                   “Professional, detail-oriented, and creative — our corporate
                   gala couldn’t have been in better hands.”
                 </p>
-                <h5 style="color: #3887be">Julius M.</h5>
+                <h5 style="color: #080569">Julius M.</h5>
                 <small class="text-muted">Corporate Client</small>
               </div>
             </div>
@@ -474,7 +561,7 @@
                   “From lighting to layout, they brought our fashion show vision
                   to life better than we imagined.”
                 </p>
-                <h5 style="color: #3887be">Tasha K.</h5>
+                <h5 style="color: #080569">Tasha K.</h5>
                 <small class="text-muted">Fashion Show Organizer</small>
               </div>
             </div>
@@ -509,12 +596,12 @@
       </div>
     </section>
     <!-- Footer Section -->
-    <footer class="text-white pt-5 pb-4" style="background-color: #820300">
-      <div class="container text-md-left">
+    <footer class="text-white pt-5 pb-4" style="background-color: #090808">
+      <div class="container">
         <div class="row">
           <!-- Company Info -->
-          <div class="col-md-4 mb-4" data-aos="fade-up">
-            <h5 class="fw-bold text-uppercase" style="color: #ff9800">
+          <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up">
+            <h5 class="fw-bold text-uppercase" style="color: #e52020">
               SSHINNERS EVENTS
             </h5>
             <p class="small">
@@ -525,8 +612,12 @@
           </div>
 
           <!-- Quick Links -->
-          <div class="col-md-2 mb-4" data-aos="fade-up" data-aos-delay="100">
-            <h6 class="text-uppercase fw-bold mb-3" style="color: #ff9800">
+          <div
+            class="col-lg-2 col-md-6 mb-4"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <h6 class="text-uppercase fw-bold mb-3" style="color: #e52020">
               Quick Links
             </h6>
             <ul class="list-unstyled">
@@ -558,8 +649,12 @@
           </div>
 
           <!-- Contact Info -->
-          <div class="col-md-3 mb-4" data-aos="fade-up" data-aos-delay="200">
-            <h6 class="text-uppercase fw-bold mb-3" style="color: #ff9800">
+          <div
+            class="col-lg-3 col-md-6 mb-4"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            <h6 class="text-uppercase fw-bold mb-3" style="color: #e52020">
               Contact
             </h6>
             <p class="small mb-1"><i class="bx bx-map"></i> Nairobi, Kenya</p>
@@ -570,11 +665,15 @@
           </div>
 
           <!-- Social Icons -->
-          <div class="col-md-3 mb-4" data-aos="fade-up" data-aos-delay="300">
-            <h6 class="text-uppercase fw-bold mb-3" style="color: #ff9800">
+          <div
+            class="col-lg-3 col-md-6 mb-4"
+            data-aos="fade-up"
+            data-aos-delay="300"
+          >
+            <h6 class="text-uppercase fw-bold mb-3" style="color: #e52020">
               Follow Us
             </h6>
-            <div class="d-flex gap-3">
+            <div class="d-flex gap-3 flex-wrap">
               <a href="#" class="text-white fs-4"
                 ><i class="bx bxl-facebook-circle"></i
               ></a>
@@ -595,11 +694,12 @@
         <hr class="border-top border-light mt-4" />
         <div class="text-center small">
           &copy; 2025
-          <span style="color: #ff9800">SSHINNERS EVENT LIMITED</span>. All
+          <span style="color: #e52020">SSHINNERS EVENT LIMITED</span>. All
           rights reserved.
         </div>
       </div>
     </footer>
+
     <!-- Back to Top Button -->
     <button
       id="backToTopBtn"
