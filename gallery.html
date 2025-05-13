@@ -14,6 +14,41 @@
       rel="stylesheet"
     />
     <style>
+      :root {
+        --red: #001a6e;
+        --maroon: #410445;
+        --orange: #e52020;
+        --blue: #ff2df1;
+      }
+      .navbar {
+        background-color: var(--maroon);
+        /* height: 4rem; */
+      }
+
+      .navbar-brand,
+      .nav-link {
+        color: #fff !important;
+      }
+
+      .nav-link:hover {
+        color: var(--orange) !important;
+      }
+
+      .donate-btn {
+        background-color: var(--orange); /* or use a hex code like #FFA725 */
+        color: white;
+        padding: 8px 20px;
+        border-radius: 30px;
+        font-weight: 600;
+        text-transform: uppercase;
+        transition: all 0.3s ease;
+      }
+
+      .donate-btn:hover {
+        background-color: #050505; /* slightly darker for hover effect */
+        color: white;
+      }
+
       .gallery-overlay {
         background: linear-gradient(
           to bottom,
@@ -61,17 +96,71 @@
     </style>
   </head>
   <body>
+    <!-- Navbar -->
+    <nav
+      class="navbar navbar-expand-lg navbar-dark sticky-top"
+      style="background-color: #0e0d0d"
+    >
+      <div class="container">
+        <!-- Logo + Brand -->
+        <a class="navbar-brand d-flex align-items-center gap-2" href="#">
+          <img src="assets/logo.jpg" alt="Shinners Event Logo" height="40" />
+        </a>
+
+        <!-- Toggler for mobile -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Navbar Links -->
+        <div
+          class="collapse navbar-collapse justify-content-end"
+          id="navbarNav"
+        >
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#About">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#services">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="emcee.html">Emcee</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="gallery.html">Gallery</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Contact</a>
+            </li>
+            <li class="nav-item">
+              <a href="donate.html" class="btn donate-btn ms-3"> Donate </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
     <!-- Hero Section -->
     <div
       class="gallery-overlay"
       style="
-        background-image: url('assets/wedding\ event.jpg');
+        background-image: url('assets/wedding.jpg');
         background-size: cover;
         background-position: center;
       "
     >
-      <h1 class="display-4 fw-bold" style="color: #c4052b">Our Gallery</h1>
-      <p class="lead">A glimpse into our unforgettable moments</p>
+      <h1 class="display-4 fw-bold" style="color: #ea2910">Our Gallery</h1>
+      <p class="lead" style="color: #050408">
+        A glimpse into our unforgettable moments
+      </p>
     </div>
 
     <!-- Gallery Grid -->
@@ -81,7 +170,7 @@
         <div class="col-md-4" data-aos="zoom-in">
           <div class="gallery-item">
             <img
-              src="assets/corporate.jpg"
+              src="assets/corporate2.jpg"
               alt="Corporate Launch"
               class="gallery-img"
             />

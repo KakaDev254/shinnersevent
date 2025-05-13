@@ -14,11 +14,38 @@
     />
     <style>
       :root {
-        --orange: #ffa725;
-        --black: #0a0a0a;
-        --blue: #060a7a;
-        --red: #820300;
-        --light-bg: #fef8f5;
+        --red: #001a6e;
+        --maroon: #070707;
+        --orange: #e52020;
+        --blue: #ff2df1;
+      }
+      .navbar {
+        background-color: var(--maroon);
+        /* height: 4rem; */
+      }
+
+      .navbar-brand,
+      .nav-link {
+        color: #fff !important;
+      }
+
+      .nav-link:hover {
+        color: var(--orange) !important;
+      }
+
+      .donate-btn {
+        background-color: var(--orange); /* or use a hex code like #FFA725 */
+        color: white;
+        padding: 8px 20px;
+        border-radius: 30px;
+        font-weight: 600;
+        text-transform: uppercase;
+        transition: all 0.3s ease;
+      }
+
+      .donate-btn:hover {
+        background-color: #050505; /* slightly darker for hover effect */
+        color: white;
       }
 
       .hero-donate {
@@ -30,7 +57,7 @@
       }
 
       .donate-btn {
-        background-color: var(--black);
+        background-color: var(--maroon);
         color: white;
         padding: 10px 24px;
         border: none;
@@ -45,7 +72,7 @@
 
       .csr-highlight {
         background-color: var(--light-bg);
-        border-left: 6px solid var(--orange);
+        border-left: 6px solid var(--red);
         padding: 1rem 1.5rem;
         margin-bottom: 2rem;
         border-radius: 10px;
@@ -59,10 +86,62 @@
     </style>
   </head>
   <body>
+    <!-- Navbar -->
+    <nav
+      class="navbar navbar-expand-lg navbar-dark sticky-top"
+      style="background-color: #0e0d0d"
+    >
+      <div class="container">
+        <!-- Logo + Brand -->
+        <a class="navbar-brand d-flex align-items-center gap-2" href="#">
+          <img src="assets/logo.jpg" alt="Shinners Event Logo" height="40" />
+        </a>
+
+        <!-- Toggler for mobile -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Navbar Links -->
+        <div
+          class="collapse navbar-collapse justify-content-end"
+          id="navbarNav"
+        >
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#About">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#services">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="emcee.html">Emcee</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="gallery.html">Gallery</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Contact</a>
+            </li>
+            <li class="nav-item">
+              <a href="donate.html" class="btn donate-btn ms-3"> Donate </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
     <!-- Hero Section -->
     <section class="hero-donate">
       <h1 class="display-5 fw-bold">Support Our Mission</h1>
-      <p class="lead" style="color: var(--light-bg)">
+      <p class="lead" style="color: white">
         Join SHINNERS Event in making a lasting impact through our CSR programs.
       </p>
       <a href="#donate-form" class="donate-btn mt-3">Donate Now</a>
@@ -72,7 +151,7 @@
     <section class="container py-5">
       <h2
         class="mb-4 text-center text-uppercase fw-bold"
-        style="color: var(--blue)"
+        style="color: var(--red)"
       >
         Our Commitment to Society
       </h2>
@@ -113,7 +192,7 @@
 
     <!-- Donation Options -->
     <section id="donate-form" class="container py-5 text-center">
-      <h3 class="mb-4 fw-bold" style="color: var(--blue)">
+      <h3 class="mb-4 fw-bold" style="color: var(--red)">
         Choose a Donation Method
       </h3>
 
@@ -146,13 +225,13 @@
 
     <!-- Past Events -->
     <section class="container py-5">
-      <h3 class="text-center fw-bold mb-4" style="color: var(--blue)">
+      <h3 class="text-center fw-bold mb-4" style="color: var(--red)">
         Snapshots from Past Charity Events
       </h3>
       <div class="row g-4 past-events">
         <div class="col-md-4">
           <img
-            src="https://images.unsplash.com/photo-1584467735871-4482a1a14f1b"
+            src="assets/corporate2.jpg"
             alt="Boot Cancer Challenge"
             class="img-fluid w-100"
           />

@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Emcee – SSHINNERS EVENT LIMITED</title>
+    <title>Emcee – SHINNERS EVENT LIMITED</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -15,15 +15,43 @@
     <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
     <style>
       :root {
-        --primary-red: #b80000;
-        --dark-red: #820300;
-        --orange: #ff9800;
-        --blue: #0d1c86;
+        --red: #001a6e;
+        --maroon: #070707;
+        --orange: #e52020;
+        --blue: #ff2df1;
+      }
+      .navbar {
+        background-color: var(--maroon);
+        /* height: 4rem; */
+      }
+
+      .navbar-brand,
+      .nav-link {
+        color: #fff !important;
+      }
+
+      .nav-link:hover {
+        color: var(--orange) !important;
+      }
+
+      .donate-btn {
+        background-color: var(--orange); /* or use a hex code like #FFA725 */
+        color: white;
+        padding: 8px 20px;
+        border-radius: 30px;
+        font-weight: 600;
+        text-transform: uppercase;
+        transition: all 0.3s ease;
+      }
+
+      .donate-btn:hover {
+        background-color: #050505; /* slightly darker for hover effect */
+        color: white;
       }
 
       .emcee-hero {
         background: url("assets/corporate.jpg") center/cover no-repeat;
-        min-height: 80vh;
+        min-height: 60vh;
         color: white;
         display: flex;
         align-items: center;
@@ -43,11 +71,115 @@
       }
 
       .section-title {
-        color: var(--blue);
+        color: var(--red);
+      }
+      .hexagon-wrapper {
+        width: 550px;
+        aspect-ratio: 1 / 1;
+        margin: auto;
+      }
+
+      .hexagon {
+        clip-path: polygon(
+          25% 6.7%,
+          75% 6.7%,
+          100% 50%,
+          75% 93.3%,
+          25% 93.3%,
+          0% 50%
+        );
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+        height: 100%;
+        background: #eee;
+        border: 6px solid var(--red);
+        transition: transform 0.4s ease;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+      }
+
+      .hex-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.3s ease;
+      }
+
+      .hexagon:hover .hex-img {
+        transform: scale(1.05);
+      }
+
+      .hex-overlay {
+        position: absolute;
+        inset: 0;
+        background-color: rgba(0, 0, 0, 0.5);
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        gap: 1rem;
+      }
+
+      .hexagon:hover .hex-overlay {
+        opacity: 1;
+      }
+
+      .hex-overlay a:hover {
+        color: var(--red);
       }
     </style>
   </head>
   <body>
+    <!-- Navbar -->
+    <nav
+      class="navbar navbar-expand-lg navbar-dark sticky-top"
+      style="background-color: #0e0d0d"
+    >
+      <div class="container">
+        <!-- Logo + Brand -->
+        <a class="navbar-brand d-flex align-items-center gap-2" href="#">
+          <img src="assets/logo.jpg" alt="Shinners Event Logo" height="40" />
+        </a>
+
+        <!-- Toggler for mobile -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Navbar Links -->
+        <div
+          class="collapse navbar-collapse justify-content-end"
+          id="navbarNav"
+        >
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#About">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#services">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="emcee.html">Emcee</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="gallery.html">Gallery</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Contact</a>
+            </li>
+            <li class="nav-item">
+              <a href="donate.html" class="btn donate-btn ms-3"> Donate </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
     <!-- Hero Section -->
     <section class="emcee-hero">
       <div data-aos="fade-down">
@@ -59,16 +191,33 @@
     </section>
 
     <!-- Emcee Profile -->
+
     <section class="py-5">
       <div class="container">
         <div class="row align-items-center">
+          <!-- Hexagon Image -->
           <div class="col-md-6 mb-4 mb-md-0" data-aos="fade-right">
-            <img
-              src="assets/emceeJonah.jpg"
-              class="img-fluid rounded shadow"
-              alt="Emcee"
-            />
+            <div class="hexagon-wrapper position-relative">
+              <div class="hexagon">
+                <img src="assets/emceeJonah.jpg" alt="Emcee" class="hex-img" />
+                <div
+                  class="hex-overlay d-flex justify-content-center align-items-center"
+                >
+                  <a href="#" class="text-white fs-4"
+                    ><i class="bx bxl-facebook-circle"></i
+                  ></a>
+                  <a href="#" class="text-white fs-4"
+                    ><i class="bx bxl-instagram-alt"></i
+                  ></a>
+                  <a href="#" class="text-white fs-4"
+                    ><i class="bx bxl-twitter"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
           </div>
+
+          <!-- Emcee Text -->
           <div class="col-md-6" data-aos="fade-left">
             <h2 class="section-title">Our Lead Emcee</h2>
             <p>
@@ -130,16 +279,13 @@
     </section>
 
     <!-- Contact CTA -->
-    <section
-      class="py-5 text-white"
-      style="background-color: var(--primary-red)"
-    >
+    <section class="py-5 text-white" style="background-color: var(--maroon)">
       <div class="container text-center" data-aos="fade-up">
         <h2>Book Our Emcee for Your Next Event!</h2>
         <p class="mb-4">
-          Make your event unforgettable with SSHINNERS EVENT LIMITED
+          Make your event unforgettable with SHINNERS EVENT LIMITED
         </p>
-        <a href="contact.html" class="btn btn-light px-4 py-2">Contact Us</a>
+        <a href="#" class="btn btn-light px-4 py-2">Contact Us</a>
       </div>
     </section>
 
