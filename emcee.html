@@ -125,6 +125,25 @@
       .hex-overlay a:hover {
         color: var(--red);
       }
+      @media (max-width: 768px) {
+        .hexagon-wrapper {
+          width: 400px;
+        }
+      }
+
+      /* Small screens (large phones) */
+      @media (max-width: 576px) {
+        .hexagon-wrapper {
+          width: 350px;
+        }
+      }
+
+      /* Extra small screens (small phones) */
+      @media (max-width: 400px) {
+        .hexagon-wrapper {
+          width: 250px;
+        }
+      }
     </style>
   </head>
   <body>
